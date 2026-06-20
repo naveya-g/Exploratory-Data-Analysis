@@ -26,25 +26,18 @@ The goal is to **turn raw data into clear, actionable insights for making better
 ---
 
 ### Analysis Workflow
-
-**Part 1 - Sports**
-- Replaced `-` placeholders with NaN and converted all relevant columns from object to float type for analysis
-- Extracted only the launch year from the mixed-format `TeamLaunch` column using a lambda function
-- Performed **Univariate Analysis** on `WonGames` and `Score` using histograms to understand distribution of team performance
-- Performed **Bivariate Analysis** using a box plot across all key variables to spot spread and outliers
-- Narrowed the dataset to the **Top 20 best-performing teams** sorted by wins to draw more focused insights
-- Plotted a **correlation heatmap** on the top 20 teams - found that PlayedGames, BasketScored, WonGames, Score, and Tournament are highly correlated
-- Used a **multi-line plot** to compare WonGames, PlayedGames, Score, BasketScored, and BasketGiven across the top 20 teams - confirmed Team 1 as the best overall performer with highest scores and lowest baskets given
-- Computed **Win Probability (59.6%)** and **Loss Probability** for each team by dividing WonGames/LostGames by PlayedGames
-- Provided data improvement suggestions across **5V dimensions** - Quality, Quantity, Variety, Velocity, and Veracity
-
-**Part 2 - Startup Ecosystem**
+ 
+**Part 1 — Sports**
+- Replaced `-` placeholders with NaN, converted object columns to float, and extracted only the launch year from the mixed-format `TeamLaunch` column
+- Performed Univariate and Bivariate analysis using histograms and box plots; narrowed focus to the **Top 20 best-performing teams** sorted by wins
+- Plotted a **correlation heatmap** and **multi-line plot** on top 20 teams — confirmed Team 1 as best overall performer with highest scores and lowest baskets given
+- Computed **Win Probability (59.6%)** and Loss Probability per team; provided data improvement suggestions across **5V dimensions** (Quality, Quantity, Variety, Velocity, Veracity)
+---
+**Part 2 — Startup Ecosystem**
 - Dropped rows with missing funding values and converted the `Funding` column from mixed string format (e.g. $500K, $2M, $1B) into a clean numerical `Funds_in_Million` column
-- Plotted a **box plot** to detect outliers in funding; calculated the upper fence using the IQR method and removed companies exceeding it
-- Visualized funding distribution separately for **Operating vs Closed** companies using KDE plots - both groups appeared visually similar in mean and spread
-- Checked the frequency of `OperatingState` and `Result` columns to understand the composition of winners vs contestants
-- Calculated the **percentage of winners still operating** vs **percentage of contestants still operating** to compare survival rates
-- Filtered all events containing the keyword **"disrupt"** from the year **2013 onwards** using a lambda function applied row-wise
+- Detected and removed outliers using the **IQR upper fence method**; visualized funding distribution for Operating vs Closed companies using KDE plots
+- Calculated the **percentage of winners still operating** vs **percentage of contestants still operating** to compare survival rates across both groups
+- Filtered all events containing the keyword **"disrupt"** from **2013 onwards** using a row-wise lambda function
 
 ---
 
