@@ -27,13 +27,13 @@ The goal is to **turn raw data into clear, actionable insights for making better
 
 ### Analysis Workflow
  
-**Part 1 — Sports**
+**Part 1 - Sports**
 - Replaced `-` placeholders with NaN, converted object columns to float, and extracted only the launch year from the mixed-format `TeamLaunch` column
 - Performed Univariate and Bivariate analysis using histograms and box plots; narrowed focus to the **Top 20 best-performing teams** sorted by wins
-- Plotted a **correlation heatmap** and **multi-line plot** on top 20 teams — confirmed Team 1 as best overall performer with highest scores and lowest baskets given
+- Plotted a **correlation heatmap** and **multi-line plot** on top 20 teams - confirmed Team 1 as best overall performer with highest scores and lowest baskets given
 - Computed **Win Probability (59.6%)** and Loss Probability per team; provided data improvement suggestions across **5V dimensions** (Quality, Quantity, Variety, Velocity, Veracity)
 ---
-**Part 2 — Startup Ecosystem**
+**Part 2 - Startup Ecosystem**
 - Dropped rows with missing funding values and converted the `Funding` column from mixed string format (e.g. $500K, $2M, $1B) into a clean numerical `Funds_in_Million` column
 - Detected and removed outliers using the **IQR upper fence method**; visualized funding distribution for Operating vs Closed companies using KDE plots
 - Calculated the **percentage of winners still operating** vs **percentage of contestants still operating** to compare survival rates across both groups
